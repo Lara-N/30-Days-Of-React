@@ -1,5 +1,5 @@
 
-var countries = require('../../countries.js');
+var countries = require('./countries.js');
 var webTechs = require('./web_techs.js');
 
 let text = 'I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.';
