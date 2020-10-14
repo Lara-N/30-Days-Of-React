@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500|Roboto:300,400,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>30 Days Of React Challenge</title>
+    <style>
+       /*  Exercises: Inline Style
+
+        Create a style object for the main JSX
+        Create a style object for the footer and app JSX
+        Add more styles to the JSX elements */
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      html,
+      body {
+        font-family: 'Montserrat';
+        height: 100%;
+        line-height: 1;
+        font-weight: 300;
+        color: black;
+      }
+
+      .root {
+        min-height: 100%;
+        position: relative;
+      }
+
+      .header-wrapper,
+      .main-wrapper,
+      .footer-wrapper {
+        width: 85%;
+        margin: auto;
+      }
+
+      .header-wrapper,
+      .main-wrapper {
+        padding: 10px;
+        margin: 2px auto;
+      }
+
+      h1 {
+        font-size: 70px;
+        font-weight: 300;
+      }
+
+      h2,
+      h3 {
+        font-weight: 300;
+      }
+
+      header {
+        font-family: 'Montserrat';
+        background-color: rgb(203, 173, 215);
+        padding: 20px;
+      }
+
+      main {
+        padding: 10px 10px 60px;
+        /* Height of the footer */
+      }
+
+      footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 60px;
+        /* Height of the footer */
+        background: rgb(202, 123, 236);
+      }
+      p{
+          padding: 1em;
+      }
+
+      .footer-wrapper {
+        font-weight: 400;
+        text-align: center;
+        line-height: 60px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="root"></div>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      // To get the root element from the HTML document
+      const rootElement = document.querySelector('.root');
+
+      // JSX element, header
+      const header = (
+          <header>
+            <div className='header-wrapper'>
+                <h1>Welcome, this is me :)</h1>
+            </div>
+        </header>
+      );
+
+      //Write your name in a JSX element and store it in a name variable
+      //Write a JSX element which displays your full name, country, title, gender, email, phone number.
+      //Use h1 for the name and p for the rest of the information and store it in a user variable
+      const myName = (
+          <h1>Melissa Huerta</h1>
+        );
+
+      const myInfo = {
+        country: 'Perú 🇵🇪',
+        title: 'Software Developer',
+        gender: 'female',
+        email: 'thecodeloops@gmail.com',
+        phoneNumber: '+510 XXX XX54',
+      };
+
+      const myInfoFormatted = Object.values(myInfo).map((e) => <p key={e}>{e}</p>)
+
+        //JSX element, main
+      const main = (
+        <main>
+          <div className='main-wrapper'>
+            {myName}
+            {myInfoFormatted}
+          </div>
+        </main>
+      );
+
+      //Write a footer JSX element
+      const footer = (
+        <footer>
+          <div className='footer-wrapper'>
+            <p>Copyright 2020</p>
+          </div>
+        </footer>
+      ) 
+
+      // JSX element, app
+      const app = (
+        <div className='app'>
+          {header}
+          {main}
+          {footer}
+        </div>
+      )
+
+      // we render the JSX element using the ReactDOM package
+      ReactDOM.render(app, rootElement)
+    </script>
+  </body>
+</html>
