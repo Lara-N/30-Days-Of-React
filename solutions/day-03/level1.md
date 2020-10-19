@@ -52,3 +52,10 @@ Yes, it is ::party::
 #### Add different Visual Studio Code extensions to improve your productivity(eg. prettier, ESLint etc) ✅
 
 ####  Try to make different module in a different file and import it to index.js. ✅
+
+I created a react app while practicing the exercises of day 03 and i moved ```myInfo``` to a different file from ```index.js```, exported it and imported it in ```index.js``` 😬
+
+<img src="https://github.com/piratelicorne/30-Days-Of-React/blob/exercise-solutions/solutions/src/export_myInfo.png" alt="export module" style="float: left; margin-right: 10px;"  width = 700px />
+
+
+<img src="https://github.com/piratelicorne/30-Days-Of-React/blob/exercise-solutions/solutions/src/import_myInfo.png" alt="import module" style="float: left; margin-right: 10px;"  width = 700px />
