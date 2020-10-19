@@ -1,0 +1,21 @@
+- node_modules - store all the necessary node packages of the react applications.
+
+- Public
+  -index.html - the only HTML file we have in the entire application
+  - favicon.io - a favicon
+  - manifest.json - is use to make the application a progressive web app
+  - other images- which can be used for open graph image or for other purposes
+  - robots.txt - information if the website allow web scraping
+
+- src
+
+  - App.css, index.css - are different CSS files
+  - index.js - a file which allows to connect all the components with index.html
+  - App.js - A file which we import most the presentational components
+  - serviceWorker.js: is used to add progressive web app feature
+  - setupTests.js - to write testing cases
+
+- package.json- List of packages the applications uses
+- .gitignore - React boilerplate comes with git initiated, and the .gitingore allow files and folders not to be pushed to GitHub
+- README.md - Markdown file to write documentation
+- yarn.lock or package-lock.json - a means to lock the version of the package
